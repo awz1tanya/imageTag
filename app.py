@@ -42,11 +42,10 @@ def tag_from_ai_reply():
 
     # Fallback to Prachi if ai_name is not available
     if ai_name not in all_ai_names:
-        ai_name = 'Prachi'
+        ai_name = 'prachi'
 
     # Filter available tags for this ai_name
     relevant_tags = {tag for (name, tag) in tag_url_map if name == ai_name}
-    tag_list = ", ".join(relevant_tags)
 
     # Gemini API Call
     genai.configure(api_key=DEFAULT_API_KEY)
@@ -58,22 +57,21 @@ Analyze the following AI girlfriend reply:
 \"{ai_reply}\"
 
 From the following list of tags:
-{greeting, kiss, slap, teasing, flirting, shy, confident, seductive_gaze, romantic_tension, whisper,
-fingering, thrusting, oral_sex, deep_kiss, biting_lip, licking, sucking_breast, sucking_penis,
-grabbing_waist, hand_on_breast, hand_on_thigh, pulling_hair, neck_kiss, pin_against_wall,
-mounted_position, cowgirl_position, doggy_position, missionary_position, spread_legs,
-ride_on_top, bend_over_position, leg_wrap, leg_lift, back_arched, slow_tease, climax_building,
-saree, blouse_and_saree, ghagra_choli, salwar_kameez, kurti_and_jeans, t_shirt_and_jeans,
-crop_top, tank_top, short_skirt, long_skirt, bodycon_dress, backless_dress,
-off_shoulder_dress, sleeveless_top, deep_neckline, bikini, lingerie, nightie, gown,
-braless, no_panty,
-strip_starting, strip_slowly, unbuttoning, pulling_down_skirt, pulling_down_panty,
-bra_sliding_off, undressing_completely, seductive_peek, strip_one_by_one, strip_tease_mode,
-mirror_view, over_the_shoulder, shy_smile, flirty_wink, panting, breathless, arching_back,
-spreading_thighs, holding_sheet, fingers_between_legs, touching_self, moaning, eye_contact,
-wet_dress, dress_transparent, chest_visible, nipples_visible, thighs_visible,
-back_visible, cleavage_visible, waist_visible, seductive_pose, side_pose, open_mouth
-}
+{"greeting", "kiss", "slap", "teasing", "flirting", "shy", "confident", "seductive_gaze", "romantic_tension", "whisper",
+"fingering", "thrusting", "oral_sex", "deep_kiss", "biting_lip", "licking", "sucking_breast", "sucking_penis",
+"grabbing_waist", "hand_on_breast", "hand_on_thigh", "pulling_hair", "neck_kiss", "pin_against_wall",
+"mounted_position", "cowgirl_position", "doggy_position", "missionary_position", "spread_legs",
+"ride_on_top", "bend_over_position", "leg_wrap", "leg_lift", "back_arched", "slow_tease", "climax_building",
+"saree", "blouse_and_saree", "ghagra_choli", "salwar_kameez", "kurti_and_jeans", "t_shirt_and_jeans",
+"crop_top", "tank_top", "short_skirt", "long_skirt", "bodycon_dress", "backless_dress",
+"off_shoulder_dress", "sleeveless_top", "deep_neckline", "bikini", "lingerie", "nightie", "gown",
+"braless", "no_panty",
+"strip_starting", "strip_slowly", "unbuttoning", "pulling_down_skirt", "pulling_down_panty",
+"bra_sliding_off", "undressing_completely", "seductive_peek", "strip_one_by_one", "strip_tease_mode",
+"mirror_view", "over_the_shoulder", "shy_smile", "flirty_wink", "panting", "breathless", "arching_back",
+"spreading_thighs", "holding_sheet", "fingers_between_legs", "touching_self", "moaning", "eye_contact",
+"wet_dress", "dress_transparent", "chest_visible", "nipples_visible", "thighs_visible",
+"back_visible", "cleavage_visible", "waist_visible", "seductive_pose", "side_pose", "open_mouth"}
 
 Return 1 or 2 tags that best describe the visual, mood, or erotic elements suggested in the AI response.
 Only output tags as comma-separated text like this:
