@@ -12,7 +12,7 @@ CORS(app, resources={r"/tag": {"origins": [
     "https://lovable-ai-friends.lovable.app"
 ]}})
 
-DEFAULT_API_KEY = "AIzaSyBWpPkPeCAqX_ua_AOgHiDUmuBmhvkvbLk"
+DEFAULT_API_KEY = "AIzaSyDyn8p6mIfjX5LxSTRUEhZnLsncYT68Fyw"
 DEFAULT_MODEL = "models/gemini-1.5-flash-latest"
 CSV_PATH = "imageTag.csv"
 
