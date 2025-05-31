@@ -5,10 +5,12 @@ import csv
 import random
 
 app = Flask(__name__)
-CORS(app, resources={r"/tag": {"origins": [
+CORS(app, resources={r"/chat": {"origins": [
     "https://lovable-ai-persona-chat.lovable.app",
     "https://*.lovableproject.com",
-    "https://*.lovable.app"]}})
+    "https://*.lovable.app",
+    "https://lovable-ai-friends.lovable.app"  # Add this specific origin
+]}})
 
 DEFAULT_API_KEY = "AIzaSyBWpPkPeCAqX_ua_AOgHiDUmuBmhvkvbLk"
 DEFAULT_MODEL = "models/gemini-1.5-flash-latest"
